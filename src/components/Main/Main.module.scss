@@ -1,0 +1,31 @@
+
+
+@keyframes shimmer {
+  0% {
+    background-position: -200px 0;
+  }
+  100% {
+    background-position: 200px 0;
+  }
+}
+
+.shimmer-text {
+  color: transparent;
+  background: linear-gradient(to right, #7c150c, #9b0a0a);
+  background-clip: text;
+  -webkit-background-clip: text;
+  animation: shimmer 5s infinite linear;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-spin {
+  animation: spin 10s linear infinite;
+}

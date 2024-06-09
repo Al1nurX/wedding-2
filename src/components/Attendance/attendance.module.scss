@@ -1,0 +1,101 @@
+.App {
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  margin-top: 30px;
+  font-family: "Times New Roman", Times, serif; // Adjust font family if needed
+
+  .form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    text-align: start;
+    width: 100%;
+    max-width: 400px; // Adjust the width of the form to be similar to the screenshot
+    margin: auto;
+  }
+
+  .anketa {
+    color: #000000; // Black color
+    font-size: 28px; // Adjusted font size for the header
+  }
+
+  input[type="text"],
+  textarea {
+    border: 1px solid #000000; // Black border
+    width: 100%;
+    padding: 10px;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    font-size: 18px; // Adjusted font size for inputs
+  }
+
+  input[type="text"]:focus,
+  textarea:focus {
+    outline: none;
+  }
+
+  .radio {
+    margin: 15px 0;
+    color: #000000; // Black color
+    margin-left: 15px;
+    margin-bottom: 25px;
+
+    input[type="radio"] {
+      margin-right: 10px;
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      appearance: none;
+      width: 20px;
+      height: 20px;
+      border: 2px solid #000000; // Black border
+      border-radius: 50%;
+      outline: none;
+      cursor: pointer;
+      vertical-align: middle;
+    }
+
+    label {
+      font-size: 18px; // Adjusted font size for labels
+      vertical-align: middle;
+    }
+
+    input[type="radio"]:checked {
+      background-color: #b9a22d; // Black fill when checked
+    }
+  }
+
+  .button {
+    width: 100%;
+    padding: 10px;
+    border-radius: 10px;
+    border: none;
+    background-color: #7b6c20; // Gold background color
+    color: white; // Black text color
+    font-size: 18px; // Adjusted font size for button
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+
+    &:hover {
+      background-color: darkgoldenrod; // Darker gold on hover
+    }
+  }
+
+  @keyframes shimmer {
+    0% {
+      background-position: -200px 0;
+    }
+    100% {
+      background-position: 200px 0;
+    }
+  }
+
+  .shimmer-text {
+    color: transparent;
+    background: linear-gradient(to right, #7c150c, #9b0a0a);
+    background-clip: text;
+    -webkit-background-clip: text;
+    animation: shimmer 5s infinite linear;
+  }
+}
